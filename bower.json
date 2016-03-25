@@ -1,13 +1,13 @@
 {
-  "name": "angular2-skeleton-app",
+  "name": "meal-tracker",
   "description": "",
   "main": "",
   "authors": [
-    "Michael Smith <michaelanthonysmith00@gmail.com>"
+    "Jessica Fix"
   ],
   "license": "ISC",
   "moduleType": [],
-  "homepage": "",
+  "homepage": "https://github.com/jcfix/Meal_Tracker_Angular2",
   "ignore": [
     "**/.*",
     "node_modules",

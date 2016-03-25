@@ -1,5 +1,5 @@
 {
-  "name": "angular2-skeleton-app",
+  "name": "meal-tracker",
   "version": "1.0.0",
   "scripts": {
     "start": "npm run tsc:w",
@@ -34,5 +34,16 @@
     "lite-server": "^2.1.0",
     "typescript": "^1.8.2",
     "typings": "^0.6.8"
-  }
+  },
+  "description": "#### By Jessica Fix",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcfix/Meal_Tracker_Angular2.git"
+  },
+  "author": "Jessica Fix",
+  "bugs": {
+    "url": "https://github.com/jcfix/Meal_Tracker_Angular2/issues"
+  },
+  "homepage": "https://github.com/jcfix/Meal_Tracker_Angular2#readme"
 }
