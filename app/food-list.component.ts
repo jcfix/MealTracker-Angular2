@@ -1,12 +1,12 @@
 import { Component } from 'angular2/core';
 import { FoodComponent } from './food.component';
 import { Food } from './food.model';
-// import { NewFoodComponent } from './add-food.component';
+import { NewFoodComponent } from './new-food.component';
 
 @Component({
   selector: 'food-list',
   inputs: ['foodList'],
-  directives: [FoodComponent],
+  directives: [FoodComponent, NewFoodComponent],
   template: `
   <div *ngFor="#currentFood of foodList">
     <h4 class="foodListItem" (click)="clickFood(currentFood)">
@@ -15,6 +15,7 @@ import { Food } from './food.model';
     <food-display *ngIf="currentFood === selectedFood" [food]="currentFood">
     </food-display>
   </div>
+  <new-food (onSubmitNewFood)="addFood($event)"></new-food>
   `
 })
 
@@ -28,5 +29,10 @@ export class FoodListComponent {
     } else {
       this.selectedFood = clickedFood;
     }
+  }
+  addFood(newFoodArr: Array<any>): void {
+    this.foodList.push(
+      new Food(newFoodArr[0], newFoodArr[1], newFoodArr[2])
+    );
   }
 }
