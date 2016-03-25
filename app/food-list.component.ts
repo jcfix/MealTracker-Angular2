@@ -11,7 +11,7 @@ import { CaloriesPipe } from './calories.pipe';
   directives: [FoodComponent, NewFoodComponent, EditFoodComponent],
   pipes: [CaloriesPipe],
   template: `
-  <h4>Calorie Count: {{calorieCount}}</h4>
+  <h4>Calorie Count: {{calorieCount}} | Average Calorie Count: {{averageCaloriesString}}</h4>
   <select (change)="onChange($event.target.value)" class="form-control" id="dropdown">
       <option value="all" selected="selected">All Foods</option>
       <option value="healthy">Healthy Foods</option>
@@ -34,6 +34,8 @@ export class FoodListComponent {
   public selectedFood: Food;
   public filterCalories: string = 'all';
   public calorieCount: number = 0;
+  public averageCalories: number = 0;
+  public averageCaloriesString: string;
   constructor() {}
   clickFood(clickedFood: Food): void {
     if(this.selectedFood === clickedFood) {
@@ -46,6 +48,9 @@ export class FoodListComponent {
     this.foodList.push(
       new Food(newFoodArr[0], newFoodArr[1], newFoodArr[2])
     );
+    this.calorieCount += newFoodArr[2];
+    this.averageCalories = (this.calorieCount / (this.foodList.length));
+    this.averageCaloriesString = (Math.round((this.averageCalories)*100)/100).toFixed(1);
   }
   onChange(filterOption) {
     this.filterCalories = filterOption;
@@ -57,6 +62,8 @@ export class FoodListComponent {
         this.foodList[i].calories = newCal;
       }
       this.calorieCount += (this.foodList[i].calories);
+      this.averageCalories = (this.calorieCount / (this.foodList.length));
+      this.averageCaloriesString = (Math.round((this.averageCalories)*100)/100).toFixed(1)
     }
   }
 }
