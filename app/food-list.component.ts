@@ -11,6 +11,7 @@ import { CaloriesPipe } from './calories.pipe';
   directives: [FoodComponent, NewFoodComponent, EditFoodComponent],
   pipes: [CaloriesPipe],
   template: `
+  <h4>Calorie Count: {{calorieCount}}</h4>
   <select (change)="onChange($event.target.value)" class="form-control" id="dropdown">
       <option value="all" selected="selected">All Foods</option>
       <option value="healthy">Healthy Foods</option>
@@ -22,7 +23,7 @@ import { CaloriesPipe } from './calories.pipe';
     </h4>
     <food-display *ngIf="currentFood === selectedFood" [food]="currentFood">
     </food-display>
-    <edit-food *ngIf="currentFood === selectedFood" [food] = "currentFood"></edit-food>
+    <edit-food *ngIf="currentFood === selectedFood" [food] = "currentFood" (onUpdateCaloricIntake)="updateCalCounter($event)"></edit-food>
   </div>
   <new-food (onSubmitNewFood)="addFood($event)"></new-food>
   `
@@ -32,6 +33,7 @@ export class FoodListComponent {
   public foodList: Food[];
   public selectedFood: Food;
   public filterCalories: string = 'all';
+  public calorieCount: number = 0;
   constructor() {}
   clickFood(clickedFood: Food): void {
     if(this.selectedFood === clickedFood) {
@@ -47,5 +49,14 @@ export class FoodListComponent {
   }
   onChange(filterOption) {
     this.filterCalories = filterOption;
+  }
+  updateCalCounter(newCal: number): void {
+    this.calorieCount = 0;
+    for(var i = 0; i < this.foodList.length; i++) {
+      if(this.foodList[i].name === "selectedFood") {
+        this.foodList[i].calories = newCal;
+      }
+      this.calorieCount += (this.foodList[i].calories);
+    }
   }
 }
