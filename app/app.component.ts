@@ -21,8 +21,7 @@ export class AppComponent{
     this.foods = [
       new Food('Oatmeal', 'steamed oats with blueberries and honey', 95),
       new Food('Green Smoothie', 'kale, spinach, pineapple, cilantro', 140),
-      new Food('Salad', 'asparagus, tomatoes, arugula', 320),
-      new Food('Beer', 'white IPA', 170)
+      new Food('Eggplant Parmesan', 'veggies, pasta, ricotta', 375)
     ];
   }
 }
