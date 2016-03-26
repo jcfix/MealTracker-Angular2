@@ -1,3 +1,39 @@
-h1 {
-  color: blue;
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans);
+
+body {
+  background: url("../../resources/img/healthy.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+
+.page-wrapper h1, h4  {
+  text-align: center;
+}
+
+.page-wrapper h1 {
+  letter-spacing: 1px;
+  color: white;
+  font-size: 70px;
+}
+
+.page-wrapper h4 {
+  letter-spacing: 1px;
+  color: #A6B3C0
+}
+
+#dropdown {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+#foodItem {
+  color: white;
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+#foodItem:hover {
+  background-color: #B3BCBE;
 }

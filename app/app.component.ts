@@ -7,8 +7,10 @@ import { Food } from './food.model';
   directives: [FoodListComponent],
   template:`
     <div class="container">
-      <h3>FOOD LOG</h3>
-      <food-list [foodList]="foods"></food-list>
+      <div class="page-wrapper">
+        <h1>FOOD LOG</h1>
+        <food-list [foodList]="foods"></food-list>
+      </div>
     </div>
   `
 })
