@@ -4,8 +4,12 @@ body {
   background: url("../../resources/img/healthy.jpg") no-repeat center center fixed;
   background-size: cover;
   font-family: 'Fira Sans', sans-serif;
+  text-transform: uppercase;
 }
 
+input {
+  text-transform: uppercase;
+}
 
 .page-wrapper h1, h4  {
   text-align: center;

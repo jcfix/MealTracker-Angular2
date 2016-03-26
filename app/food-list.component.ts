@@ -13,9 +13,9 @@ import { CaloriesPipe } from './calories.pipe';
   template: `
   <h4>Calorie Count: {{calorieCount}} | Average Calorie Count: {{averageCaloriesString}}</h4>
   <select (change)="onChange($event.target.value)" class="form-control" id="dropdown">
-      <option value="all" selected="selected">All Foods</option>
-      <option value="healthy">Healthy Foods</option>
-      <option value="unhealthy">Unhealthy Foods</option>
+      <option value="all" selected="selected">SHOW ALL</option>
+      <option value="healthy">SHOW HEALTHY</option>
+      <option value="unhealthy">SHOW UNHEALTHY</option>
     </select>
   <div class="row">
     <div class="foodItemList col-md-4" *ngFor="#currentFood of foodList | calories: filterCalories">
