@@ -35,7 +35,7 @@ body {
 }
 
 #foodItem:hover {
-  background-color: #B3BCBE;
+  background-color: #D5E3EA;
 }
 
 .foodDisplay, h6 {
@@ -51,4 +51,30 @@ body {
 
 input, .form-control {
   text-align: center;
+}
+
+.edit-btn {
+  margin-top: 4%;
+  padding: 4px 30px;
+  border: 2px solid black;
+  background: transparent;
+  color: black;
+}
+
+.edit-btn:hover {
+  background-color: #B3BCBE;
+  color: white;
+}
+
+.add-btn {
+  margin-top: 2%;
+  padding: 4px 30px;
+  border: 2px solid black;
+  background: transparent;
+  color: black;
+}
+
+.add-btn:hover {
+  background-color: #B3BCBE;
+  color: white;
 }

@@ -10,7 +10,7 @@ import {Food} from './food.model';
     <input [(ngModel)]="food.name" class="form-control"/>
     <input [(ngModel)]="food.description" class="form-control"/>
     <input [(ngModel)]="food.calories" type="number" class="form-control" #newCalories>
-    <button (click)="updateCaloricIntake(newCalories)" class="btn btn-info">Update</button>
+    <button (click)="updateCaloricIntake(newCalories)" class="edit-btn">UPDATE</button>
   </div>
   `
 })
