@@ -9,6 +9,7 @@ body {
 
 input {
   text-transform: uppercase;
+  text-align: center;
 }
 
 .page-wrapper h1, h4  {
@@ -26,6 +27,20 @@ input {
   color: #A6B3C0;
 }
 
+select {
+  border-radius: 0;
+  outline: 2px inset black;
+  outline-offset: -2px;
+  -webkit-appearance: none;
+  text-align: center;
+}
+
+option {
+  text-align: center;
+}
+
+
+
 /*#A6B3C0*/
 
 #dropdown {
@@ -34,7 +49,6 @@ input {
 }
 
 #foodItem {
-  /*color: #A6B3C0;*/
   color: black;
   border: 2px solid black;
   padding: 10px;
@@ -53,12 +67,14 @@ input {
 
 .food-form {
   text-align: center;
-  width: 200px;
+  width: 250px;
   margin: 0 auto;
 }
 
-input, .form-control {
-  text-align: center;
+.food-form input {
+  margin: 2px 2px;
+  border: 2px solid black;
+  border-radius: 0;
 }
 
 .edit-btn {
@@ -82,6 +98,12 @@ input, .form-control {
   text-align: center;
   width: 400px;
   margin: 0 auto;
+  }
+
+  .add-food-form input {
+    margin: 2px 2px;
+    border: 2px solid black;
+    border-radius: 0;
   }
 
 
