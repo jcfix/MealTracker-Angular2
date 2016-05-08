@@ -11,7 +11,9 @@ import { CaloriesPipe } from './calories.pipe';
   directives: [FoodComponent, NewFoodComponent, EditFoodComponent],
   pipes: [CaloriesPipe],
   template: `
-  <h4>Calorie Count: {{calorieCount}} | Average Calorie Count: {{averageCaloriesString}}</h4>
+  <div class="calorie-header">
+  <h4 id="calories">Calorie Count: {{calorieCount}} | Average Calorie Count: {{averageCaloriesString}}</h4>
+  </div>
   <select (change)="onChange($event.target.value)" class="form-control" id="dropdown">
       <option value="all" selected="selected">SHOW ALL</option>
       <option value="healthy">SHOW HEALTHY</option>
@@ -22,9 +24,11 @@ import { CaloriesPipe } from './calories.pipe';
       <h4 id="foodItem" (click)="clickFood(currentFood)">
       {{ currentFood.name }}
       </h4>
+      <div class="food-details">
       <food-display *ngIf="currentFood === selectedFood" [food]="currentFood">
       </food-display>
       <edit-food *ngIf="currentFood === selectedFood" [food] = "currentFood" (onUpdateCaloricIntake)="updateCalCounter($event)"></edit-food>
+      </div>
     </div>
   </div>
   <new-food (onSubmitNewFood)="addFood($event)"></new-food>

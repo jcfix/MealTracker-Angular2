@@ -3,6 +3,7 @@
 body {
   background: url("../../resources/img/healthy.jpg") no-repeat center center fixed;
   background-size: cover;
+  box-shadow: inset 0 0 800px rgba(225, 225, 225, 0.4);
   font-family: 'Fira Sans', sans-serif;
   text-transform: uppercase;
 }
@@ -20,11 +21,23 @@ input {
   letter-spacing: 1px;
   color: white;
   font-size: 70px;
+  text-shadow: 1px 1px black;
 }
 
-.page-wrapper h4 {
+.calorie-header{
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+#calories {
+  display: inline;
+  align-items: center;
   letter-spacing: 1px;
-  color: #A6B3C0;
+  color: black;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+  padding: 2px 10px 2px 10px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 select {
@@ -47,18 +60,23 @@ option {
 #foodItem {
   color: black;
   border: 2px solid black;
+  background-color: #D5E3EA;
   padding: 10px;
   text-align: center;
 }
 
 #foodItem:hover {
-  background-color: #D5E3EA;
-  color: white;
+  background-color: #F0F8FF;
 }
 
 .foodDisplay, h6 {
   font-size: 18px;
   text-align: center;
+  padding: 6px;
+}
+
+.food-details{
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .food-form {
@@ -75,15 +93,15 @@ option {
 
 .edit-btn {
   margin-top: 4%;
+  margin-bottom: 8%;
   padding: 4px 30px;
   border: 2px solid black;
-  background: transparent;
+  background: #D5E3EA;
   color: black;
 }
 
 .edit-btn:hover {
-  background-color: #B3BCBE;
-  color: white;
+  background-color: #F0F8FF;
 }
 
 #add-label {
@@ -107,11 +125,10 @@ option {
   margin-top: 2%;
   padding: 4px 30px;
   border: 2px solid black;
-  background: transparent;
+  background: #B3BCBE;
   color: black;
 }
 
 .add-btn:hover {
-  background-color: #B3BCBE;
-  color: white;
+  background-color: #F0F8FF;
 }
