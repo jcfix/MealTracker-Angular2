@@ -6,7 +6,9 @@ import { Food } from './food.model';
   outputs: ['onSubmitNewFood'],
   template: `
     <hr>
-      <h4 id="add-label">ADD NEW FOOD</h4>
+      <div class="add-food-header">
+        <h4 id="add-label">ADD NEW FOOD</h4>
+      </div>
       <div class="add-food-form">
         <input placeholder="Name" class="form-control" #newName>
         <input placeholder="Description" class="form-control" #newDescription>
